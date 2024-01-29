@@ -1,0 +1,15 @@
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/instance: authelia
+  name: users
+apiVersion: v1
+data:
+  users_database.yaml: |
+    users:
+      "authelia":
+        disabled: false
+        displayname: "authelia"
+        password: "$argon2id$v=19$m=16,t=2,p=1$bHZwMHJKekphMElXZ1IweQ$7TBCP0rCUxPomNAohUpAiQ"
+        email: "authelia@example.com"
+ 
